@@ -4,7 +4,7 @@ import numpy as np
 
 # Spatial discretization
 L = 10.0                                      # Domain length
-n = 21                                        # Number of points
+n = 101                                       # Number of points
 dx = L/(n-1)                                  # Length of spacing
 
 # Time discretization
@@ -16,9 +16,8 @@ a = 0.5                                       # Velocity coefficient
 
 # Initial conditions
 f = np.zeros((n,1))                           # Wave function (Initialization)
-f[4:9] = 1.0                                  # Wave square pulse
+f[40:60] = 1.0                                # Wave square pulse
 
-print f
 f_old = f
 # Time loop
 for k in range(0,nt):
